@@ -53,7 +53,7 @@ module.exports = function(grunt) {
         livereload: true
       },
       js: {
-        files: [ 'assets/js/**/*' ],
+        files: [ 'assets/js/**/*', '!assets/js/tmp/**' ],
         tasks: [ 'uglify', 'concat' ]
       },
       css: {

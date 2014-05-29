@@ -16,10 +16,10 @@ $(document).ready(function(){
     $(window).trigger('scroll');
 
     /* Fix navigation. */
-    $('#navigation').fixedonlater({
-      speedDown: 250,
-      speedUp: 100
-    });
+    // $('#navigation').fixedonlater({
+    //   speedDown: 250,
+    //   speedUp: 100
+    // });
 
     /* Centralize elements on page. */
     $('.centralized').centralized({

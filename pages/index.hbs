@@ -52,6 +52,61 @@ homepage: true
 </div>
 <!-- END PAGE | Welcome -->
 
+
+<!-- PAGE | WORK -->
+<div class="pages page-work" id="page-work">
+  <div class="container">
+    <!-- Header -->
+    <header>
+      <h4 class="line-divider">我们的作品</h4>
+      <h1>精选作品展示</h1>
+      <div class="row">
+        <div class="span8 offset2">
+          <p>
+            我们为您挑选了几个作品。
+          </p>
+        </div>
+      </div>
+      <nav class="submenu">
+        <ul>
+          <li>
+            <a href="#" class="plugin-filter active" data-filter="all">显示全部</a>
+          </li>
+          <li>
+            <a href="#" class="plugin-filter" data-filter="实拍广告">实拍广告</a>
+          </li>
+          <li>
+            <a href="#" class="plugin-filter" data-filter="品牌宣传片">品牌宣传片</a>
+          </li>
+          <li>
+            <a href="#" class="plugin-filter" data-filter="活动花絮">活动花絮</a>
+          </li>
+          <li>
+            <a href="#" class="plugin-filter" data-filter="纪录片">纪录片</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <article>
+      <ul class="thumbnails plugin-filter-elements portfolio-items">
+        {{#each posts.work}}
+        <li class="span4 mix {{join data.category " "}}">
+          <a href="#{{filename}}" data-destination="portfolio-items" data-insert="before">
+            <img src="{{data.image}}">
+            <div class="details">
+              <h3 class="project-title">{{data.title}}</h3>
+              <small>{{data.subtitle}}</small>
+            </div>
+          </a>
+        </li>
+        {{/each}}
+      </ul>
+    </article>
+  </div>
+</div>
+<!-- END PAGE | WORK -->
+
+
 <!-- PAGE | ABOUT -->
 <div class="pages page-about" id="page-about">
   <div class="container">
@@ -181,65 +236,3 @@ homepage: true
   </div>
 </div>
 <!-- END PAGE | FEATURES -->
-
-
-<!-- PAGE | WORK -->
-<div class="pages page-work" id="page-work">
-  <div class="container">
-    <!-- Header -->
-    <header>
-      <h4 class="line-divider">我们的作品</h4>
-      <h1>精选作品展示</h1>
-      <div class="row">
-        <div class="span8 offset2">
-          <p>
-            我们为您挑选了几个作品。
-          </p>
-        </div>
-      </div>
-      <nav class="submenu">
-        <ul>
-          <li>
-            <a href="#" class="plugin-filter active" data-filter="all">显示全部</a>
-          </li>
-          <li>
-            <a href="#" class="plugin-filter" data-filter="实拍广告">实拍广告</a>
-          </li>
-          <li>
-            <a href="#" class="plugin-filter" data-filter="品牌宣传片">品牌宣传片</a>
-          </li>
-          <li>
-            <a href="#" class="plugin-filter" data-filter="活动花絮">活动花絮</a>
-          </li>
-          <li>
-            <a href="#" class="plugin-filter" data-filter="纪录片">纪录片</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-    <article>
-      <ul class="thumbnails plugin-filter-elements portfolio-items">
-        {{#each posts.work}}
-        <li class="span4 mix {{join data.category " "}}">
-          <a href="#{{filename}}" data-destination="portfolio-items" data-insert="before">
-            <img src="{{data.image}}">
-            <div class="details">
-              <h3 class="project-title">{{data.title}}</h3>
-              <small>{{data.subtitle}}</small>
-            </div>
-          </a>
-        </li>
-        {{/each}}
-      </ul>
-    </article>
-    <footer>
-      <div class="show-more-cube">
-         <a href="#/work/more/" data-destination="plugin-filter-elements" data-insert="appendTo" data-action="remove">
-          <span>显示<br/>更多</span>
-        </a>
-      </div>
-    </footer>
-    <!-- End footer -->
-  </div>
-</div>
-<!-- END PAGE | WORK -->

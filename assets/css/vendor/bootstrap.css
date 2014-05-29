@@ -1267,8 +1267,8 @@ footer {
 .fixed-top {
   position: fixed;
   top: 0;
-  opacity: 0;
-  filter: alpha(opacity=0);
+  /*opacity: 0;
+  filter: alpha(opacity=0);*/
 }
 
 .fixed-bottom {
