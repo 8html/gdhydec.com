@@ -117,6 +117,10 @@
             }, 1000);
           }
 
+
+            setTimeout(function() {
+            }, 1000);
+
           /*
            *   Portfolio details
            *   Slide down content and scroll to.
@@ -128,7 +132,13 @@
             $('html, body').animate({
               scrollTop: $(".portfolio-item-details").offset()
                 .top - 70
-            }, 1000);
+            }, 1000, function() {
+              if ($('.bxslider').length > 0) {
+                $('.bxslider').bxSlider({
+                  mode: 'fade'
+                });
+              }
+            });
           }
 
           /*
